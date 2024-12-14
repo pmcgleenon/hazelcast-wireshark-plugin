@@ -91,16 +91,10 @@ function hazelcast_client.dissector(buffer, pinfo, tree)
 
             -- Call the decoder method if message_type is found and not "0x000000"
             if message_type ~= "0x000000" and message_type_description ~= "Unknown Message Type" then
-                local decoder_function = decoders[message_type_key]
-                if decoder_function then
-                    print("Debug: Calling decoder function for message type = " .. message_type_key)  -- Log when decoder function is called
-                    -- decoder_function()  -- Call the decoder function
-                    callDecoder(message_type_key)
-                else
-                    print("Debug1: No decoder function found for message type = " .. message_type_key)
-                end
+                -- local decoder_function = decoders[message_type_key]
+                callDecoder(message_type_key)
             else
-                print("Debug2: No decoder function found for message type = " .. message_type_key)
+                print("Debug2: Skipping decoder lookup for message type = " .. message_type_key)
             end
         end
 
