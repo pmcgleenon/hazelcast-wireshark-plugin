@@ -21,8 +21,8 @@ ls ~/.local/lib/wireshark/plugins/
 
 Copy all of the lua files to your wireshark plugins location
 ```
-cp hzc_client.lua ~/.local/lib/wireshark/plugins/
-cp hzc_message_types.lua ~/.local/lib/wireshark/plugins/
+cp hz_client.lua ~/.local/lib/wireshark/plugins/
+cp hz_message_types.lua ~/.local/lib/wireshark/plugins/
 cp hz_decoders.lua ~/.local/lib/wireshark/plugins/
 ```
 
