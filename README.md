@@ -19,10 +19,11 @@ Check your wireshark plugins location
 ls ~/.local/lib/wireshark/plugins/
 ```
 
-Copy the decoder to your wireshark plugins location
+Copy all of the lua files to your wireshark plugins location
 ```
 cp hzc_client.lua ~/.local/lib/wireshark/plugins/
 cp hzc_message_types.lua ~/.local/lib/wireshark/plugins/
+cp hz_decoders.lua ~/.local/lib/wireshark/plugins/
 ```
 
 **Step 2**: Restart wireshark and enjoy
